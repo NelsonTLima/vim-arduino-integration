@@ -15,6 +15,14 @@ function! ListArduino()
   return deviceList
 endfunction
 
+function! SelectedArduino()
+  if exists("g:arduinoPort") && exists("g:arduinoFbqn")
+    echo "PORT - " . g:arduinoPort
+    echo "FBQN - " . g:arduinoFbqn
+  else
+    echo "There's no device selected."
+  endif
+endfunction
 
 function! SetArduino()
   let deviceList = ListArduino()
