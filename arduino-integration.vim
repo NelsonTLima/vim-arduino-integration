@@ -40,6 +40,9 @@ function! SetArduino()
   if g:arduinoFbqn == ""
     let g:arduinoFbqn = "Unknown"
   endif
+
+  echo "\n\nSelected:"
+  call SelectedArduino()
 endfunction
 
 function! ArduinoUpload()
