@@ -45,7 +45,7 @@ function! SetArduino()
   call SelectedArduino()
 endfunction
 
-function! ArduinoUpload()
+function! UploadArduino()
   if ! exists("g:arduinoPort") || g:arduinoFbqn == "Unknown"
     call SetArduino()
   endif
