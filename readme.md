@@ -33,7 +33,7 @@ If you want to download a specific Arduino CLI version, for example 0.9.0 or nig
 curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR=~/local/bin sh
 ```
 
-Acess https://arduino.github.io/arduino-cli/0.34/installation/ for more arduino-cli for more arduino-cli installation information.
+Acess https://arduino.github.io/arduino-cli/0.34/installation/ for more arduino-cli installation information.
 
 
 ### The actual plugin:
