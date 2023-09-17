@@ -51,3 +51,8 @@ function! UploadArduino()
   endif
   exec "!clear &&printf '\e[3J' ; arduino-cli upload ./ -b". g:arduinoFbqn . " -p" . g:arduinoPort
 endfunction
+
+command! ListArduino call ListArduino()
+command! SelectedArduino call SelectedArduino()
+command! UploadArduino call ArduinoUpload()
+command! SetArduino call SetArduino()
