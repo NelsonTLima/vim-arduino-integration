@@ -1,5 +1,7 @@
-function! SetArduino()
-  let deviceList = split(system("arduino-cli board list | grep /dev"), "\n")
+" Vim global plugin for selecting devices and uploading programs to arduino.
+" Last Change:  2023 Sep 17
+" Mantainer:    Nelson Lima <nelsontlima@gmail.com>
+" License:      This file is placed in the public domain.
 
   echo "Device List:\n"
 
