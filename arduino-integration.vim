@@ -3,15 +3,29 @@
 " Mantainer:    Nelson Lima <nelsontlima@gmail.com>
 " License:      This file is placed in the public domain.
 
-  echo "Device List:\n"
+function! ListArduino()
+  let deviceList = split(system("arduino-cli board list | grep /dev"), "\n")
 
+  echo "    Port                            Protocol Type              Board Name  FQBN            Core"
   let index = 0
   for device in deviceList
     echo index . " - " . device
     let index = index + 1
   endfor
+  return deviceList
+endfunction
 
-  let device = str2nr(input("Choose device index: "))
+
+function! SetArduino()
+  let deviceList = ListArduino()
+
+  let device = str2nr(input("Choose device: "))
+
+  if device <= 0 || device >= len(deviceList)
+    echo "\nDevice out of list range."
+    return
+  endif
+
   let g:arduinoPort = split(deviceList[device])[0]
   let g:arduinoFbqn = matchstr(deviceList[device], "[0-9A-Za-z_]*:[0-9A-Za-z_]*:[0-9A-Za-z_]*")
 
