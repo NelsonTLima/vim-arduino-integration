@@ -21,7 +21,7 @@ When you want to choose the device you're going to work, you can put vim on the 
 If you want to upload directly, just put:
 
 ```vim
-:call ArduinoUpload
+:call ArduinoUpload()
 ```
 
 Now you cand upload programs into your arduino without the necessity of using Arduino IDE.
