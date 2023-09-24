@@ -50,11 +50,15 @@ cd vim-arduino-integration
 
 Put your Vim in the normal mode and you can use one of the following commands.
 
-|Commands           |Description                                        |
-|:---               |:---                                               |
-|:ListArduino       |Lists all the devices connected to your computer   |
-|:SelectedArduino   |Show wich Port and FBQN you are using              |
-|:SetArduino        |Selects wich arduino you are going to work on      |
-|:UploadArduino     |Uploads the source code to the selected arduino    |
+|Commands                       |Description                                                    |
+|:---                           |:---                                                           |
+|:ListArduino                   |Lists all the devices connected to your computer               |
+|:ListAllArduino                |Lists all the FBQN avaliable for compiling                     |
+|:SelectedArduino               |Show wich Port and FBQN you are using                          |
+|:SetArduino                    |Selects wich arduino you are going to work on                  |
+|:ChangeCompilingFbqn           |When there's no device connected, changes compiling FBQN       |
+|:echo g:compilingArduinoFbqn   |Shows wich Fbqn will be used when there's no device connected  |
+|:CompileArduino                |Compiles the source code                                       |
+|:UploadArduino                 |Uploads the source code to the selected arduino                |
 
 Now you can upload programs to your arduino directly on VIM. without the necessity of using Arduino IDE.
