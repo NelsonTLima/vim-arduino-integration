@@ -113,7 +113,7 @@ function! CompileArduino()
   if exists("g:arduinoFbqn") && g:arduinoFbqn != "Unknown"
     exec "!clear &&printf '\e[3J' ; arduino-cli compile -b" . g:arduinoFbqn " %"
   else
-    exec "!clear &&printf '\e[3J' ; arduino-cli compile -b" . g:compilingArduinoFbqn "%"
+    exec "!clear &&printf '\e[3J' ; arduino-cli compile -b" . g:compilingArduinoFbqn . " %"
   endif
 endfunction
 
